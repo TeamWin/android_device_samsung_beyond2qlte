@@ -52,6 +52,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # Kernel
 TARGET_PREBUILT_KERNEL := device/samsung/beyond2qlte/prebuilt/Image-dtb
+BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_APPEND_DTB := true
@@ -84,6 +85,8 @@ TARGET_OTA_ASSERT_DEVICE := beyond2qlte
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_USERIMAGES_USE_EXT4 := true
+BOARD_INCLUDE_RECOVERY_DTBO := true
+BOARD_PREBUILT_DTBOIMAGE := device/samsung/beyond2qlte/prebuilt/dtbo
 TARGET_RECOVERY_FSTAB := device/samsung/beyond2qlte/recovery/root/etc/recovery.fstab
 
 # Android Verified Boot
@@ -97,7 +100,7 @@ TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_FBE := true
 
 # TWRP
-TW_DEVICE_VERSION := 3_mentalmuso
+TW_DEVICE_VERSION := 6_mentalmuso
 RECOVERY_VARIANT := twrp
 TW_THEME := portrait_hdpi
 TW_Y_OFFSET := 143
@@ -105,7 +108,7 @@ TW_H_OFFSET := -143
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
-TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
+TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_MAX_BRIGHTNESS := 36500
 TW_DEFAULT_BRIGHTNESS := 15000
 TW_NO_REBOOT_BOOTLOADER := true
